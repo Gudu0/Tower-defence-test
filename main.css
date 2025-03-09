@@ -4,6 +4,7 @@ canvas{
   height:90%;
   position:relative;
   border:2px solid red;
+  margin:0;
 }
 
 body{
