@@ -13,6 +13,9 @@ body{
   margin-right:4px;
 }
 
+p{
+  display:inline;
+}
 /* Classes */
 .title{
   text-align:center;
