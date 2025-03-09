@@ -5,7 +5,7 @@ document.addEventListener("mousemove", getmospos, false);
 const pageX = document.getElementById("posx");
 const pageY = document.getElementById("posy");
 //Draw Loop
-setInterval(draw, 20);
+myCanvas.onload = setInterval(draw, 20);
 
 function draw(){
   getmospos();
@@ -14,6 +14,6 @@ function draw(){
 
 //Functions
 function getmospos(){
-  pageX.innerText = "X: "+event.pageX;
-  pageY.innerText = "Y: "+event.pageY;
+  pageX.innerText = "X: " + Str(event.pageX);
+  pageY.innerText = "Y: " + Str(event.pageY);
 }
