@@ -9,8 +9,8 @@ canvas{
 
 body{
   background-color:#3b3b3b;
-/*   padding-left:0; */
   margin:0;
+  margin-right:2px;
 }
 
 /* Classes */
