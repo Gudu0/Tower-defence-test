@@ -8,7 +8,9 @@ canvas{
 body{
   background-color:#3b3b3b;
 }
+
 /* Classes */
 .title{
   text-align:center;
+  color:white;
 }
