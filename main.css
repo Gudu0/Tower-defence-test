@@ -1,8 +1,14 @@
-.title{
-  text-align:center;
-}
+/* Elements */
 canvas{
   width:100%;
   height:90%;
   position:relative;
+}
+
+body{
+  background-color:#3b3b3b;
+}
+/* Classes */
+.title{
+  text-align:center;
 }
