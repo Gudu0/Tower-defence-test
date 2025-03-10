@@ -22,8 +22,10 @@ function rectangle(){
   ctx.rect(rx,ry,25,25);
   ctx.fillStyle = "#FF0000"
   ctx.fill();
-  if(rx !== myCanvas.width - 25){
+  if(rx !== myCanvas.width){
     rx+=2;
+  } else {
+    rx-=2
   }
 }
 
