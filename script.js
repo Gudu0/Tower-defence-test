@@ -9,7 +9,7 @@ setInterval(draw, 20);
 
 function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
-  background();
+ //background();
   rectangle();
 }
 
@@ -18,9 +18,10 @@ function draw(){
 //Functions
 function rectangle(){
   ctx.beginPath();
-  ctx.rect(rx,ry,50,50);
+  ctx.rect(rx,ry,25,25);
   ctx.fill();
   rx+=2;
+  ry+=2;
 }
 
 function showCoords(event) {
@@ -34,9 +35,9 @@ function clearCoor() {
   document.getElementById("posx").innerHTML = "X";
 }
 
-function background(){
-  ctx.beginPath();
-  ctx.rect(0,0, myCanvas.width, myCanvas.height);
-  ctx.fillStyle = "#474747";
-  ctx.fill();
-}
+// function background(){
+//   ctx.beginPath();
+//   ctx.rect(0,0, myCanvas.width, myCanvas.height);
+//   ctx.fillStyle = "#474747";
+//   ctx.fill();
+// }
