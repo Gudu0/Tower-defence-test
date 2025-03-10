@@ -3,7 +3,8 @@ const myCanvas = document.getElementById("canvasid");
 const ctx = myCanvas.getContext("2d");
 let rx = 0;
 let ry = 0;
-
+let rl = 0; 
+  
 //Draw Loop
 setInterval(draw, 20);
 
@@ -21,10 +22,10 @@ function rectangle(){
   ctx.rect(rx,ry,25,25);
   ctx.fillStyle = "#FF0000"
   ctx.fill();
-  if(rx !== myCanvas.width + 25){
+  if(rx + 25 !== myCanvas.width){
     rx+=2;
-  } else {
-    rx-=2
+  } else if (rx + 25 == myCanvas.width){
+    rx-=2;
   }
 }
 
