@@ -19,6 +19,7 @@ function draw(){
 function rectangle(){
   ctx.beginPath();
   ctx.rect(rx,ry,25,25);
+  ctx.fillStyle = "#FF0000"
   ctx.fill();
   rx+=2;
   ry+=2;
