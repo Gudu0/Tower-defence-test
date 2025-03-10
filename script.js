@@ -29,5 +29,5 @@ function showCoords(event) {
 }
 
 function clearCoor() {
-  document.getElementById("posx").innerHTML = "";
+  document.getElementById("posx").innerHTML = "X";
 }
