@@ -21,8 +21,11 @@ function rectangle(){
   ctx.rect(rx,ry,25,25);
   ctx.fillStyle = "#FF0000"
   ctx.fill();
-  rx+=2;
-  ry+=2;
+  if(rx !== myCanvas.width){
+    rx+=2;
+  } else {
+    rx-=2
+  }
 }
 
 function showCoords(event) {
