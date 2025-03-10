@@ -9,7 +9,7 @@ setInterval(draw, 20);
 
 function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
- //background();
+  background();
   rectangle();
 }
 
