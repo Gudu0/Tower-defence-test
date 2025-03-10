@@ -4,11 +4,10 @@ const ctx = myCanvas.getContext("2d");
 let rx = 0;
 let ry = 0;
 //Draw Loop
-myCanvas.onload = setInterval(draw, 20);
+setInterval(draw, 20);
 
 function draw(){
-  ctx.beginPath();
-  ctx.clearRect(0, 0, ctx.width, ctx.height);
+  ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
   rectangle()
 }
 
@@ -16,6 +15,8 @@ function draw(){
 
 //Functions
 function rectangle(){
-  rect(rx,ry,50,50);
-  rx+=50;
+  ctx.beginPath();
+  ctx.rect(rx,ry,50,50);
+  ctx.fill()
+  rx+=2;
 }
