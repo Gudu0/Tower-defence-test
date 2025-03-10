@@ -20,3 +20,14 @@ function rectangle(){
   ctx.fill()
   rx+=2;
 }
+
+function showCoords(event) {
+  var x = event.pageX;
+  var y = event.pageY;
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("posx").innerHTML = coor;
+}
+
+function clearCoor() {
+  document.getElementById("posx").innerHTML = "";
+}
