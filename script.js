@@ -26,6 +26,9 @@ function rectangle(){
     rx+=2;
   } else if(rx >= myCanvas.width){
     rx-= myCanvas.width;
+    console.log("Reset "+rx);
+    rx+=25;
+    console.log("Align "+rx);
   }
 }
 
