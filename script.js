@@ -35,9 +35,9 @@ function clearCoor() {
   document.getElementById("posx").innerHTML = "X";
 }
 
-// function background(){
-//   ctx.beginPath();
-//   ctx.rect(0,0, myCanvas.width, myCanvas.height);
-//   ctx.fillStyle = "#474747";
-//   ctx.fill();
-// }
+function background(){
+  ctx.beginPath();
+  ctx.rect(0,0, myCanvas.width, myCanvas.height);
+  ctx.fillStyle = "#474747";
+  ctx.fill();
+}
