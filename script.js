@@ -26,6 +26,7 @@ function rectangle(){
     rx+=2;
   } else if(rx >= myCanvas.width){
     rx-= myCanvas.width;
+    rx-=50;
   }
 }
 
