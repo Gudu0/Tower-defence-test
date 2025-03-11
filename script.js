@@ -9,7 +9,6 @@ let rl = 0;
 setInterval(draw, 20);
 
 function draw(){
-  console.clear();
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
   background();
   rectangle();
@@ -27,9 +26,6 @@ function rectangle(){
     rx+=2;
   } else if(rx >= myCanvas.width){
     rx-= myCanvas.width;
-    console.log("Reset "+rx);
-    rx+=25;
-    console.log("Align "+rx);
   }
 }
 
