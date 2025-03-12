@@ -61,7 +61,7 @@ function rectangle(){ //rectangle that moves across the screen
 }
 
 function showCoords() {
-  let coor = "X coords: " + mx + ", Y coords: " + my;
+  let coor = " X coords: " + mx + ", Y coords: " + my;
   document.getElementById("posx").innerHTML = coor;
 }
 
