@@ -9,6 +9,8 @@ const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
 let mx = 0;//Mouse X
 let my = 0;//mouse Y
+let tx = myCanvas.width / 2;
+let ty = myCanvas.height / 2;
   
 //Draw Loop
 setInterval(draw, 20); //Starting the draw loop.
@@ -28,6 +30,9 @@ function mouseCords(event){
   mx = event.pageX;
   my = event.pageY;
   showCoords();
+  let angle = atan2(my - ty, mx - tx);
+  translate(tx, tx);
+  rotate(angle);
 }
 
 function textStuff(){
@@ -36,7 +41,7 @@ function textStuff(){
 
 function tower(){
   ctx.beginPath();
-  ctx.rect(myCanvas.width / 2, myCanvas.height / 2, 10, 10);
+  ctx.rect(tx, ty, 10, 10);
   ctx.fillStyle = "#f26516";
   ctx.fill();
 }
