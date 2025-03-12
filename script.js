@@ -15,10 +15,7 @@ function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
   background();
   rectangle();
-  // if (singleCheck = 0;) {
-  extra1.innerHTML = myCanvas.width; /*+ ", " + myCanvas.height;*/
-    // singleCheck++;
-  // }
+  " Width: " + extra1.innerHTML = myCanvas.width + ", Height " + myCanvas.height;
 }
 
 //Other?
@@ -45,7 +42,7 @@ function showCoords(event) {
 }
 
 function clearCoor() {
-  document.getElementById("posx").innerHTML = "X";
+  document.getElementById("posx").innerHTML = "";
 }
 
 function background(){ //Drawing the background.
