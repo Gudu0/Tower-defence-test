@@ -8,3 +8,7 @@ Day 1
 Day 2
 • made js file
 • tried a bunch of stuff to try and get my mouse position to display, but it didnt work so I removed it.
+
+Day ?
+• keeping a day log is not going well, I forgot about it.
+•
