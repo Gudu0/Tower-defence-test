@@ -41,8 +41,9 @@ function tower(){
   ctx.fillStyle = "#f26516";
   ctx.beginPath();
   ctx.rect(tx, ty, 10, 10);
-  ttma = atan2(my - ty, mx - tx);
-  ctx.translate(tx, tx);
+  ctx.save();
+  ttma = atan2(my - ty, mx - tx); //finding the angle from tower to mouse //maybe work? its from google ai overview.
+  ctx.translate(tx, tx); 
   ctx.rotate(ttma);
   ctx.fill();
 }
@@ -61,8 +62,7 @@ function rectangle(){ //rectangle that moves across the screen
 }
 
 function showCoords() {
-  let coor = " X coords: " + mx + ", Y coords: " + my;
-  document.getElementById("posx").innerHTML = coor;
+  document.getElementById("posx").innerHTML = " X coords: " + mx + ", Y coords: " + my;
 }
 
 function background(){ //Drawing the background.
