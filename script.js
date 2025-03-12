@@ -7,6 +7,8 @@ let singleCheck = 0; //Going to use this for something I only want to run once.
 const extra1 = document.getElementById("ex1");
 const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
+let mx = //Mouse X
+let my = //mouse Y
   
 //Draw Loop
 setInterval(draw, 20); //Starting the draw loop.
@@ -22,6 +24,12 @@ function draw(){
 //Other?
 
 //Functions
+function mouseCords(event){
+  mx = event.pageX;
+  my = event.pageY;
+  showCoords();
+}
+
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
 }
@@ -35,7 +43,7 @@ function tower(){
 
 function rectangle(){ //rectangle that moves across the screen
   ctx.beginPath();
-  ctx.rect(rx,ry,10,10);
+  ctx.rect(rx,ry,50,50);
   ctx.fillStyle = "#FF0000";
   ctx.fill();
   if(rx !== myCanvas.width){
@@ -46,10 +54,8 @@ function rectangle(){ //rectangle that moves across the screen
   }
 }
 
-function showCoords(event) {
-  var x = event.pageX;
-  var y = event.pageY;
-  var coor = "X coords: " + x + ", Y coords: " + y;
+function showCoords() {
+  let coor = "X coords: " + mx + ", Y coords: " + my;
   document.getElementById("posx").innerHTML = coor;
 }
 
