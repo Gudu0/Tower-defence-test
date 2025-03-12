@@ -4,6 +4,9 @@ const ctx = myCanvas.getContext("2d");
 let rx = 0; //Rectangle X
 let ry = 0; //Rectangle Y
 let singleCheck = 0; //Going to use this for something I only want to run once.
+const extra1 = document.getElementById("ex1");
+const extra2 = document.getElementById("ex2");
+const extra3 = document.getElementById("ex3");
   
 //Draw Loop
 setInterval(draw, 20); //Starting the draw loop.
@@ -15,6 +18,7 @@ function draw(){
 }
 
 //Other?
+extra1.innerHTML = myCanvas.width + ", " myCanvas.height;
 
 //Functions
 function rectangle(){ //rectangle that moves across the screen
