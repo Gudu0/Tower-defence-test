@@ -11,6 +11,7 @@ let mx = 0;//Mouse X
 let my = 0;//mouse Y
 let tx = myCanvas.width / 2;
 let ty = myCanvas.height / 2;
+let ts = 10;//tower size
 let ttma; //tower to mouse angle.
   
 //Draw Loop
@@ -40,11 +41,12 @@ function textStuff(){
 function tower(){
   ctx.fillStyle = "#f26516";
   ctx.beginPath();
-  ctx.rect(tx, ty, 10, 10);
   ctx.save();
   ttma = atan2(my - ty, mx - tx); //finding the angle from tower to mouse //maybe work? its from google ai overview.
   ctx.translate(tx, tx); 
   ctx.rotate(ttma);
+  //rect(-rectSize / 2, -rectSize / 2, rectSize, rectSize);
+  ctx.rect(-ts/2, -ts/2, ts, ts);
   ctx.fill();
 }
 
