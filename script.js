@@ -43,7 +43,7 @@ function tower(){
   ctx.beginPath();
   ctx.save();
   ttma = atan2(my - ty, mx - tx); //finding the angle from tower to mouse //maybe work? its from google ai overview.
-  ctx.translate(tx, tx); 
+  ctx.translate(tx, ty); 
   ctx.rotate(ttma);
   //rect(-rectSize / 2, -rectSize / 2, rectSize, rectSize);
   ctx.rect(-ts/2, -ts/2, ts, ts);
