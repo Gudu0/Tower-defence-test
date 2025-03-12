@@ -65,10 +65,6 @@ function showCoords() {
   document.getElementById("posx").innerHTML = coor;
 }
 
-function clearCoor() {
-  document.getElementById("posx").innerHTML = "";
-}
-
 function background(){ //Drawing the background.
   ctx.beginPath();
   ctx.rect(0,0, myCanvas.width, myCanvas.height);
