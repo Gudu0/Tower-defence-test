@@ -15,10 +15,13 @@ function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
   background();
   rectangle();
+  if (singleCheck = 0;) {
+    extra1.innerHTML = myCanvas.width + ", " + myCanvas.height;
+    singleCheck++;
+  }
 }
 
 //Other?
-// extra1.innerHTML = toString(myCanvas.width) + ", " toString(myCanvas.height);
 
 //Functions
 function rectangle(){ //rectangle that moves across the screen
