@@ -18,7 +18,7 @@ function draw(){
 }
 
 //Other?
-extra1.innerHTML = toString(myCanvas.width) + ", " toString(myCanvas.height);
+// extra1.innerHTML = toString(myCanvas.width) + ", " toString(myCanvas.height);
 
 //Functions
 function rectangle(){ //rectangle that moves across the screen
