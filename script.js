@@ -11,6 +11,7 @@ let mx = 0;//Mouse X
 let my = 0;//mouse Y
 let tx = myCanvas.width / 2;
 let ty = myCanvas.height / 2;
+let ttma; //tower to mouse angle.
   
 //Draw Loop
 setInterval(draw, 20); //Starting the draw loop.
@@ -30,9 +31,6 @@ function mouseCords(event){
   mx = event.pageX;
   my = event.pageY;
   showCoords();
-  let angle = atan2(my - ty, mx - tx);
-  translate(tx, tx);
-  rotate(angle);
 }
 
 function textStuff(){
@@ -40,9 +38,12 @@ function textStuff(){
 }
 
 function tower(){
+  ctx.fillStyle = "#f26516";
   ctx.beginPath();
   ctx.rect(tx, ty, 10, 10);
-  ctx.fillStyle = "#f26516";
+  ttma = atan2(my - ty, mx - tx);
+  ctx.translate(tx, tx);
+  ctx.rotate(ttma);
   ctx.fill();
 }
 
