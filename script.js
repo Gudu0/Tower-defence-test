@@ -7,8 +7,8 @@ let singleCheck = 0; //Going to use this for something I only want to run once.
 const extra1 = document.getElementById("ex1");
 const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
-let mx = //Mouse X
-let my = //mouse Y
+let mx = 0;//Mouse X
+let my = 0;//mouse Y
   
 //Draw Loop
 setInterval(draw, 20); //Starting the draw loop.
