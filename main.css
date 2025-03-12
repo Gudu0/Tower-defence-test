@@ -16,7 +16,7 @@ body{
 p{
   display:inline;
   text-align:center;
-  font-size:15;
+  font-size:15px;
 }
 /* Classes */
 .title{
