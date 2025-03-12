@@ -15,16 +15,28 @@ function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
   background();
   rectangle();
-  extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
+  tower();
+  textStuff();
 }
 
 //Other?
 
 //Functions
+function textStuff(){
+  extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
+}
+
+function tower(){
+  ctx.beginPath();
+  ctx.rect(myCanvas.width / 2, myCanvas.height / 2, 10, 10);
+  ctx.fillStyle = "#f26516";
+  ctx.fill();
+}
+
 function rectangle(){ //rectangle that moves across the screen
   ctx.beginPath();
   ctx.rect(rx,ry,10,10);
-  ctx.fillStyle = "#FF0000"
+  ctx.fillStyle = "#FF0000";
   ctx.fill();
   if(rx !== myCanvas.width){
     rx+=2;
