@@ -15,7 +15,7 @@ function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
   background();
   rectangle();
-  " Width: " + extra1.innerHTML = myCanvas.width + ", Height " + myCanvas.height;
+  extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
 }
 
 //Other?
