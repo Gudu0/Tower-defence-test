@@ -48,6 +48,7 @@ function tower(){
   //rect(-rectSize / 2, -rectSize / 2, rectSize, rectSize);
   ctx.rect(-towerSize / 2, -towerSize / 2, towerSize, towerSize);
   ctx.fill();
+  ctx.restore();
 }
 
 function rectangle(){ //rectangle that moves across the screen
