@@ -20,6 +20,7 @@ function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
   background();
   rectangle();
+  wtf();
   tower();
   textStuff();
 }
@@ -63,6 +64,16 @@ function tower() {
     ctx.restore();
 }
 
+function wtf(){ //made to figure out wtf is going on with the rotation of the tower.
+  ctx.save();
+  ctx.beginPath();
+  ctx.strokeStyle = "blue";
+  ctx.lineWidth = "3";
+  ctx.moveTo(towerX, towerY);
+  ctx.lineTo(mouseX, mouseY);
+  ctx.stroke();
+  ctx.restore();
+}
 
 function rectangle(){ //rectangle that moves across the screen
   ctx.beginPath();
