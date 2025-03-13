@@ -1,4 +1,5 @@
 //Variables
+window.addEventListener("resize", resizeCanvas);
 const myCanvas = document.getElementById("canvasid");
 const ctx = myCanvas.getContext("2d");
 let rectangleX; //Rectangle X
@@ -12,10 +13,8 @@ let towerX = 500;//myCanvas.width / 2; //should be 500
 let towerY = 250;//myCanvas.height / 2; //should be 250
 let towerSize = 20; //tower size
 let ttma; //tower to mouse angle.
-  
-//Draw Loop
-setInterval(draw, 20); //Starting the draw loop.
 
+//Draw Loop
 function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
   background();
@@ -26,8 +25,11 @@ function draw(){
 }
 
 //Other?
+resizeCanvas();// making the canvas be the right size.
+setInterval(draw, 20); //Starting the draw loop.
 
 //Functions
+//from chatgpt
 function mouseCords(event) {
     const rect = myCanvas.getBoundingClientRect(); // Get canvas position
     const scaleX = myCanvas.width / rect.width;   // Scale factor for width
@@ -37,7 +39,12 @@ function mouseCords(event) {
     mouseY = (event.clientY - rect.top) * scaleY;
     showCoords();
 }
-
+//from chatgpt
+function resizeCanvas() {
+    const headerHeight = document.querySelector("header").offsetHeight;
+    myCanvas.width = window.innerWidth;
+    myCanvas.height = window.innerHeight - headerHeight;
+}
 
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
@@ -69,10 +76,7 @@ function tower() {
     ctx.restore();
 }
 
-
-
-
-function wtf(){ //made to figure out wtf is going on with the rotation of the tower.
+function wtf(){ //made to figure out wtf is going on with the rotation of the tower. //later gudu, its fixed.
   ctx.save();
   ctx.beginPath();
   ctx.strokeStyle = "blue";
