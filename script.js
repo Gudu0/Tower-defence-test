@@ -36,24 +36,33 @@ function mouseCords(event){
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
 }
+//from chatgpt
+function tower() {
+    ctx.fillStyle = "#f26516";
+    ctx.save();
 
-function tower(){
-  ctx.fillStyle = "#f26516";
-  ctx.beginPath();
-  ctx.save();
-  //ttma = Math.atan2(my - ty, mx - tx);
-  ttma = Math.atan2(mouseY - towerY, mouseX - towerX); //finding the angle from tower to mouse //maybe work? its from google ai overview.
-  ctx.translate(towerX, towerY);
-  ctx.rotate(ttma);
-  //rect(-rectSize / 2, -rectSize / 2, rectSize, rectSize);
-  ctx.rect(-towerSize / 2, -towerSize / 2, towerSize, towerSize);
-  ctx.fill();
-  ctx.moveTo(towerX, towerY);
-  ctx.lineTo(towerX + 10, towerY + 10);
-  ctx.lineWidth = "2";
-  ctx.stroke();
-  ctx.restore();
+    // Find angle from tower to mouse
+    ttma = Math.atan2(mouseY - towerY, mouseX - towerX);
+
+    // Move to tower position and rotate
+    ctx.translate(towerX, towerY);
+    ctx.rotate(ttma + Math.PI / 2); // Adjust so one specific side faces the cursor
+
+    // Draw the rectangle **centered on the tower**
+    ctx.beginPath();
+    ctx.fillRect(-towerSize / 2, -towerSize / 2, towerSize, towerSize);
+
+    // Draw the **front-facing** stroke
+    ctx.beginPath();
+    ctx.moveTo(-towerSize / 2, -towerSize / 2); // Top-left corner
+    ctx.lineTo(towerSize / 2, -towerSize / 2);  // Top-right corner
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = "black"; 
+    ctx.stroke();
+
+    ctx.restore();
 }
+
 
 function rectangle(){ //rectangle that moves across the screen
   ctx.beginPath();
