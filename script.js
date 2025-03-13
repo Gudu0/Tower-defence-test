@@ -28,11 +28,13 @@ function draw(){
 //Other?
 
 //Functions
-function mouseCords(event){
-  mouseX = event.pageX;
-  mouseY = event.pageY;
-  showCoords();
+function mouseCords(event) {
+    const rect = myCanvas.getBoundingClientRect(); // Get canvas position
+    mouseX = event.clientX - rect.left; // Adjust for canvas position
+    mouseY = event.clientY - rect.top;
+    showCoords();
 }
+
 
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
