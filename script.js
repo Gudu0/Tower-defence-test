@@ -9,8 +9,8 @@ const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
 let mouseX; //Mouse X
 let mouseY; //mouse Y
-let towerX = 500;//myCanvas.width / 2; //should be 500
-let towerY = 250;//myCanvas.height / 2; //should be 250
+let towerX = myCanvas.width / 2; //should be 500
+let towerY = myCanvas.height / 2; //should be 250
 let towerSize = 20; //tower size
 let ttma; //tower to mouse angle.
 
