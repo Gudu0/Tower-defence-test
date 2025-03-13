@@ -22,6 +22,7 @@ function draw(){
   wtf();
   tower();
   textStuff();
+  shop();
 }
 
 //Other?
@@ -111,4 +112,13 @@ function background(){ //Drawing the background.
   ctx.rect(0,0, myCanvas.width, myCanvas.height);
   ctx.fillStyle = "#474747";
   ctx.fill();
+}
+
+function shop(){
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(0,0, myCanvas.width / 5, myCanvas.height)
+  ctx.fillStyle = "lightgrey";
+  ctx.fill();
+  ctx.restore();
 }
