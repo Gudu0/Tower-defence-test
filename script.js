@@ -1,15 +1,15 @@
 //Variables
 const myCanvas = document.getElementById("canvasid");
 const ctx = myCanvas.getContext("2d");
-let rectangleX = 0; //Rectangle X
-let rectangleY = 0; //Rectangle Y
+let rectangleX; //Rectangle X
+let rectangleY; //Rectangle Y
 const extra1 = document.getElementById("ex1");//extra p elements.
 const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
-let mouseX = 0; //Mouse X
-let mouseY = 0; //mouse Y
-let towerX = myCanvas.width / 2; //should be 500
-let towerY = myCanvas.height / 2; //should be 250
+let mouseX; //Mouse X
+let mouseY; //mouse Y
+let towerX = 500;//myCanvas.width / 2; //should be 500
+let towerY = 250;//myCanvas.height / 2; //should be 250
 let towerSize = 20; //tower size
 let ttma; //tower to mouse angle.
   
@@ -30,10 +30,14 @@ function draw(){
 //Functions
 function mouseCords(event) {
     const rect = myCanvas.getBoundingClientRect(); // Get canvas position
-    mouseX = event.clientX - rect.left; // Adjust for canvas position
-    mouseY = event.clientY - rect.top;
+    const scaleX = myCanvas.width / rect.width;   // Scale factor for width
+    const scaleY = myCanvas.height / rect.height; // Scale factor for height
+
+    mouseX = (event.clientX - rect.left) * scaleX; // Adjust for canvas scaling
+    mouseY = (event.clientY - rect.top) * scaleY;
     showCoords();
 }
+
 
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
