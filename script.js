@@ -10,7 +10,7 @@ let mouseX = 0; //Mouse X
 let mouseY = 0; //mouse Y
 let towerX = myCanvas.width / 2; //should be 500
 let towerY = myCanvas.height / 2; //should be 250
-let towerSize = 10; //tower size
+let towerSize = 20; //tower size
 let ttma; //tower to mouse angle.
   
 //Draw Loop
@@ -43,11 +43,15 @@ function tower(){
   ctx.save();
   //ttma = Math.atan2(my - ty, mx - tx);
   ttma = Math.atan2(mouseY - towerY, mouseX - towerX); //finding the angle from tower to mouse //maybe work? its from google ai overview.
-  ctx.translate(towerX, towerY); 
+  ctx.translate(towerX, towerY);
   ctx.rotate(ttma);
   //rect(-rectSize / 2, -rectSize / 2, rectSize, rectSize);
   ctx.rect(-towerSize / 2, -towerSize / 2, towerSize, towerSize);
   ctx.fill();
+  ctx.moveTo(towerX, towerY);
+  ctx.lineTo(towerX + 10, towerY + 10);
+  ctx.lineWidth = "2";
+  ctx.stroke();
   ctx.restore();
 }
 
