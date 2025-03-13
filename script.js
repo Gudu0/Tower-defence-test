@@ -2,8 +2,8 @@
 window.addEventListener("resize", resizeCanvas);
 const myCanvas = document.getElementById("canvasid");
 const ctx = myCanvas.getContext("2d");
-let rectangleX; //Rectangle X
-let rectangleY; //Rectangle Y
+let rectangleX = 0; //Rectangle X
+let rectangleY = 0; //Rectangle Y
 const extra1 = document.getElementById("ex1");//extra p elements.
 const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
