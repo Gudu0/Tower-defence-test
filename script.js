@@ -35,27 +35,26 @@ function mouseCords(event) {
     showCoords();
 }
 
-
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
 }
+
 //from chatgpt
 function tower() {
     ctx.fillStyle = "#f26516";
     ctx.save();
 
-    // Find angle from tower to mouse
-    ttma = Math.atan2(mouseY - towerY, mouseX - towerX);
+    // Get the correct angle, adjusting for correct facing
+    ttma = Math.atan2(mouseY - towerY, mouseX - towerX) + Math.PI / 2;
 
-    // Move to tower position and rotate
+    // Move and rotate the canvas
     ctx.translate(towerX, towerY);
-    ctx.rotate(ttma + Math.PI / 2); // Adjust so one specific side faces the cursor
+    ctx.rotate(ttma);
 
-    // Draw the rectangle **centered on the tower**
-    ctx.beginPath();
+    // Draw the rectangle centered at (0,0)
     ctx.fillRect(-towerSize / 2, -towerSize / 2, towerSize, towerSize);
 
-    // Draw the **front-facing** stroke
+    // Stroke the **front-facing** edge
     ctx.beginPath();
     ctx.moveTo(-towerSize / 2, -towerSize / 2); // Top-left corner
     ctx.lineTo(towerSize / 2, -towerSize / 2);  // Top-right corner
@@ -65,6 +64,9 @@ function tower() {
 
     ctx.restore();
 }
+
+
+
 
 function wtf(){ //made to figure out wtf is going on with the rotation of the tower.
   ctx.save();
