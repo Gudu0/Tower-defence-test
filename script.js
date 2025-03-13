@@ -9,8 +9,8 @@ const extra2 = document.getElementById("ex2");
 const extra3 = document.getElementById("ex3");
 let mouseX; //Mouse X
 let mouseY; //mouse Y
-let towerX = myCanvas.width / 2; //should be 500
-let towerY = myCanvas.height / 2; //should be 250
+let towerX; //should be 500
+let towerY; //should be 250
 let towerSize = 20; //tower size
 let ttma; //tower to mouse angle.
 
@@ -39,11 +39,13 @@ function mouseCords(event) {
     mouseY = (event.clientY - rect.top) * scaleY;
     showCoords();
 }
-//from chatgpt
+//partly from chatgpt
 function resizeCanvas() {
     const headerHeight = document.querySelector("header").offsetHeight;
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight - headerHeight;
+    towerX = myCanvas.width / 2;
+    towerY = myCanvas.height / 2;
 }
 
 function textStuff(){
