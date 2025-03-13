@@ -1,7 +1,7 @@
 //Variables
 const myCanvas = document.getElementById("canvasid");
 const ctx = myCanvas.getContext("2d");
-let rextangleX = 0; //Rectangle X
+let rectangleX = 0; //Rectangle X
 let rectangleY = 0; //Rectangle Y
 const extra1 = document.getElementById("ex1");//extra p elements.
 const extra2 = document.getElementById("ex2");
