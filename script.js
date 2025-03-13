@@ -117,8 +117,12 @@ function background(){ //Drawing the background.
 function shop(){
   ctx.save();
   ctx.beginPath();
-  ctx.rect(0,0, myCanvas.width / 5 + 20, myCanvas.height)
+  ctx.rect(0,0, myCanvas.width / 5 + 20, myCanvas.height);
   ctx.fillStyle = "#ABB3B3";
+  ctx.fill();
+  ctx.beginPath();
+  ctx.fillStyle="blue";
+  ctx.rect(0,0, myCanvas.width / 5 + 20, 50);
   ctx.fill();
   ctx.restore();
 }
