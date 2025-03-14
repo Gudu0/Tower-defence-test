@@ -122,7 +122,7 @@ function shop(){
   ctx.fill();
   ctx.beginPath();
   ctx.fillStyle="blue";
-  ctx.rect(0,0, myCanvas.width / 5 + 20, 50);
+  ctx.rect(0,0, myCanvas.width / 5 + 20, 100);
   ctx.fill();
   ctx.restore();
 }
