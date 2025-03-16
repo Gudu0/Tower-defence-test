@@ -138,7 +138,7 @@ function calculate() {
   
   for (let i = 0; i < level; i++) { // Loop 100 times
     xp = (l + 75 * Math.pow(2, (l / 7.6))) + 300; 
-    totalxp += xp; // Add xp to totalxp
+    totalxp = totalxp + xp; // Add xp to totalxp
     l++;           // Increment l
   }
   extra2.innerHTML = totalxp; // Return total XP
