@@ -13,10 +13,6 @@ let towerX; //should be 500
 let towerY; //should be 250
 let towerSize = 20; //tower size
 let ttma; //tower to mouse angle
-let l = 0;
-let level = 100;
-let totalxp = 0;
-let xp;
   
 //Draw Loop
 function draw(){
