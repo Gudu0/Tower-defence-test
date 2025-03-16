@@ -12,8 +12,12 @@ let mouseY; //mouse Y
 let towerX; //should be 500
 let towerY; //should be 250
 let towerSize = 20; //tower size
-let ttma; //tower to mouse angle.
-
+let ttma; //tower to mouse angle
+let l = 0;
+let level = 100;
+let totalxp = 0;
+let xp;
+  
 //Draw Loop
 function draw(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height); //Clearing the canvas
@@ -28,6 +32,7 @@ function draw(){
 //Other?
 resizeCanvas();// making the canvas be the right size.
 setInterval(draw, 20); //Starting the draw loop.
+calculate();
 
 //Functions
 //from chatgpt
@@ -51,6 +56,7 @@ function resizeCanvas() {
 
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
+  extra2.innerHTML = totalxp;
 }
 
 //from chatgpt
@@ -125,4 +131,18 @@ function shop(){
   ctx.rect(0,0, myCanvas.width / 5 + 20, 100);
   ctx.fill();
   ctx.restore();
+}
+
+function calculate() {
+  let l = 0;            // Initialize l
+  let level = 100;      // Set level (as a number, not an array)
+  let totalxp = 0;      // Initialize total XP
+  let xp;               // Declare xp
+  
+  for (let i = 0; i < level; i++) { // Loop 100 times
+    xp = (l + 75 * Math.pow(2, (l / 7.6))) + 300; 
+    totalxp += xp; // Add xp to totalxp
+    l++;           // Increment l
+  }
+  extra2.innerHTML = totalxp; // Return total XP
 }
