@@ -27,12 +27,13 @@ function draw(){
   tower();
   textStuff();
   shop();
+  calculate();
 }
 
 //Other?
 resizeCanvas();// making the canvas be the right size.
 setInterval(draw, 20); //Starting the draw loop.
-calculate();
+
 
 //Functions
 //from chatgpt
