@@ -23,7 +23,6 @@ function draw(){
   tower();
   textStuff();
   shop();
-  calculate();
 }
 
 //Other?
@@ -53,7 +52,6 @@ function resizeCanvas() {
 
 function textStuff(){
   extra1.innerHTML = " Width: " + myCanvas.width + ", Height " + myCanvas.height;
-  extra2.innerHTML = totalxp;
 }
 
 //from chatgpt
@@ -128,18 +126,4 @@ function shop(){
   ctx.rect(0,0, myCanvas.width / 5 + 20, 100);
   ctx.fill();
   ctx.restore();
-}
-
-function calculate() {
-  let l = 0;            // Initialize l
-  let level = 100;      // Set level (as a number, not an array)
-  let totalxp = 0;      // Initialize total XP
-  let xp;               // Declare xp
-  
-  for (let i = 0; i < level; i++) { // Loop 100 times
-    xp = (l + 75 * Math.pow(2, (l / 7.6))) + 300; 
-    totalxp = totalxp + xp; // Add xp to totalxp
-    l++;           // Increment l
-  }
-  extra2.innerHTML = totalxp; // Return total XP
 }
